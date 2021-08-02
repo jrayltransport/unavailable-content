@@ -1,0 +1,5 @@
+this.setState({ elements: this.props.stripe.elements() }, () => {
+  this.setState({ card: this.state.elements.create('card') }, () => {
+    this.state.card.mount('#card-element');
+  });
+});...
